@@ -1,0 +1,12 @@
+<h1>Ma todo list</h1>
+
+<%@tasks.each do |task| %>
+<ul>
+  <li>todo : <%= task.name%></li>
+  <li>priority : <%= task.priority%></li>
+  <li><%= link_to "Check this task", task_path(task) %></li>
+</ul>
+<%end%>
+
+<%= link_to "Add a to do", :action => "new" %>
+

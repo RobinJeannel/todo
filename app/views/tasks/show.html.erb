@@ -1,0 +1,9 @@
+
+<p>todo : <%= @task.name%></p>
+<p>priority : <%= @task.priority%></p>
+
+<h1>what do you want to do?</h1>
+
+<%= link_to "Delete this to do", task_path(@task), method: :delete%>
+<%= link_to "Modify this to do", edit_path(@task)%>
+<%= link_to "Nothing, back to my to do", tasks_path %>

@@ -1,0 +1,12 @@
+<h1>Update your task</h1>
+
+<%= form_for(@task) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :priority %>
+
+  <%= f.select :priority, "very low"=>1, "medium"=>2, "high"=>3 %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Nothing, back to my to do", tasks_path %>
